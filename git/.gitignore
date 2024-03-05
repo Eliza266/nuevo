@@ -1,0 +1,7 @@
+notas.txt
+notas_jose.txt
+.gitattributes
+.pyc
+settings.json
+inventario.json
+../data/inventario.json

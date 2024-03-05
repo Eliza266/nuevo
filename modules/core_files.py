@@ -65,6 +65,8 @@ def edit_file_apz(nombre):
             for key, value in data.items():
                 if key not in ['cod_campus', 'nro_formulario', 'categoria', 'estado', 'id', 'nro_zona', 'ex_cpu', 'ex_mon', 'ex_mou', 'ex_tec', 'ubicacion_activo']:
                     if type(data[key]) == dict:
+                        if key == 'historial':
+                            return
                         if (type(data[key]) == dict):
                             for key2 in data[key].keys():
                                 if input(f'Desea modificar el {key2}? s(si) / Enter(no)\n-> ').lower() == 's':
@@ -82,8 +84,7 @@ def edit_file_apz(nombre):
             update_file('inventario.json', inventario)
             pause_screen()
         else:
-            print(f'No existe en {nombre.lower()}: {palabra}')
-
+            print(f'No existe en {nombre.lower()}: {palabra}')
 
 def delete_data_apz(nombre):
     clear_screen()
@@ -177,7 +178,12 @@ def search_data_apza(nombre):
             if type(value) == dict:
                 print(f'{item}:\n')
                 for item2, value2 in value.items():
-                    print(f'    {item2}: {value2}\n')
+                    if type(value2) == dict:
+                        print(f'    {item2}:\n')
+                        for item3, value3 in value2.items():
+                            print(f'\t{item3}: {value3}')
+                        print('\n')
+                    # print(f'{item2}: {value2}\n')
             elif type(value) == list:
                 print(f'{item}:\n')
                 for item2, value2 in enumerate(value):

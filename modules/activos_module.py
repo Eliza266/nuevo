@@ -84,11 +84,9 @@ def add_activos():
                     clear_screen()
                     empresa_resp = input('Ingrese la "Empresa Responsable" del activo\n-> ')
                     clear_screen()
-                    tipo = input('Ingrese el "Tipo" de activo\n-> ').lower()
-                    
+                    tipo = input('Ingrese el "Tipo" de activo)\n-> ').lower()
                     if tipo not in opt_tipos:
                         print('Revisa las instrucciones')
-                        pause_screen()
                         add_activos()
                     else:
 

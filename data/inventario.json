@@ -6,15 +6,22 @@
             "nro_formulario": "966217823",
             "nro_serial": "400SN39173",
             "name_activo": "CPU - Bodg50-9051-900-0017 GMR ESC   ",
-            "ubicacion_activo": "sputnik",
+            "ubicacion_activo": "z001",
             "marca": "Compumax ",
             "categoria": "Equipo de Computo",
-            "estado": "0",
+            "estado": "1",
             "proveedor": "Compumax",
             "valor": "500",
             "empresa_resp": "campus",
             "tipo": "CPU",
-            "historial": {}
+            "historial": {
+                "1": {
+                    "id": 1,
+                    "fecha": "4645",
+                    "tipo": "1",
+                    "id_resp": "z001"
+                }
+            }
         },
         "cpu006": {
             "cod_campus": "cpu006",
@@ -1925,22 +1932,6 @@
             "cod_transaccion": "327",
             "nro_formulario": "966217823",
             "nro_serial": "400SN39208",
-            "name_activo": "CPU - Bodg50-9051-900-0017 GMR ESC   ",
-            "ubicacion_activo": "sputnik",
-            "marca": "Compumax ",
-            "categoria": "Equipo de Computo",
-            "estado": "0",
-            "proveedor": "Compumax",
-            "valor": "500",
-            "empresa_resp": "campus",
-            "tipo": "CPU",
-            "historial": {}
-        },
-        "cpu003": {
-            "cod_campus": "cpu003",
-            "cod_transaccion": "327",
-            "nro_formulario": "966217823",
-            "nro_serial": "400SN39182",
             "name_activo": "CPU - Bodg50-9051-900-0017 GMR ESC   ",
             "ubicacion_activo": "sputnik",
             "marca": "Compumax ",
@@ -7858,6 +7849,25 @@
         }
     },
     "personal": {},
-    "zonas": {},
-    "asignaciones": {}
+    "zonas": {
+        "z001": {
+            "nro_zona": "z001",
+            "nombre_zona": "artemis",
+            "capacidad_zona": 20,
+            "ex_cpu": 1,
+            "ex_mon": 0,
+            "ex_mou": 0,
+            "ex_tec": 0
+        }
+    },
+    "asignaciones": {
+        "z001": {
+            "fecha_asignacion": "4645",
+            "tipo_asignacion ": "zona",
+            "asignado_a": "z001",
+            "activos_asignados": [
+                "cpu001"
+            ]
+        }
+    }
 }
